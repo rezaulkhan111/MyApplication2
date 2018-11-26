@@ -1,0 +1,1114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="UselessParent">
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    tools:context=".MainActivity">
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:shrinkColumns="*"
+                        android:stretchColumns="*"
+                        tools:ignore="UselessParent">
+
+                        <TableRow
+                            android:id="@+id/tr_number_4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:weightSum="2">
+
+                            <TextView
+                                android:id="@+id/tv_current_no_cow_level"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:ems="10"
+                                android:gravity="start"
+                                android:text="Field Officer Name"
+                                android:textAlignment="textStart"
+                                android:textAllCaps="false" />
+
+                            <EditText
+                                android:id="@+id/et_field_officer_name"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight=".1"
+                                android:gravity="start"
+                                android:hint="Field Officer Name"
+                                android:inputType="textPersonName"
+                                android:textAlignment="textStart"
+                                tools:ignore="HardcodedText" />
+                        </TableRow>
+
+                        <TableRow
+                            android:id="@+id/tr_number_5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:weightSum="2">
+
+                            <TextView
+                                android:id="@+id/tv_cbo_no_level"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:ems="10"
+                                android:gravity="start"
+                                android:text="CBO No"
+                                android:textAlignment="textStart"
+                                android:textAllCaps="false" />
+
+                            <EditText
+                                android:id="@+id/et_cbo_no"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight=".1"
+                                android:gravity="start"
+                                android:hint="CBO No"
+                                android:inputType="textPersonName"
+                                android:textAlignment="textStart"
+                                tools:ignore="HardcodedText" />
+                        </TableRow>
+
+                        <TableRow
+                            android:id="@+id/tr_number_6"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:weightSum="2">
+
+                            <TextView
+                                android:id="@+id/tv_current_no_cow_level"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:ems="10"
+                                android:gravity="start"
+                                android:text="Current No Cow"
+                                android:textAlignment="textStart"
+                                android:textAllCaps="false"
+                                tools:ignore="DuplicateIds" />
+
+                            <TextView
+                                android:id="@+id/tv_current_no_cow"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight=".1"
+                                android:gravity="start"
+                                android:text="0"
+                                android:textAlignment="textStart"
+                                android:textAllCaps="false" />
+                        </TableRow>
+
+                    </TableLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:shrinkColumns="*"
+                        android:stretchColumns="*">
+
+                        <TableRow
+                            android:id="@+id/tr_number_7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="#357ab5"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:id="@+id/tv_sl_no_title"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="0"
+                                android:layout_weight="1.00"
+                                android:ems="10"
+                                android:gravity="start"
+                                android:text="No."
+                                android:textAlignment="textStart"
+                                android:textAllCaps="false"
+                                android:textColor="#ffffff"
+                                tools:ignore="HardcodedText" />
+
+                            <TextView
+                                android:id="@+id/tv_category_title"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="1"
+                                android:layout_weight="2.63"
+                                android:ems="10"
+                                android:text="Category"
+                                android:textAllCaps="false"
+                                android:textColor="#ffffff"
+                                tools:ignore="HardcodedText" />
+
+                            <TextView
+                                android:id="@+id/tv_item_title"
+
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="2"
+                                android:layout_weight="1.30"
+                                android:ems="10"
+                                android:text="Item Name"
+                                android:textAllCaps="false"
+                                android:textColor="#ffffff"
+                                tools:ignore="HardcodedText" />
+
+                            <TextView
+                                android:id="@+id/tv_quantity_title"
+
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="3"
+                                android:layout_weight="1.65"
+                                android:ems="10"
+                                android:text="Quantity"
+                                android:textAllCaps="false"
+                                android:textColor="#ffffff"
+                                tools:ignore="HardcodedText" />
+
+                            <TextView
+                                android:id="@+id/tv_price_bdt_title"
+
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="4"
+                                android:layout_weight="1.76"
+                                android:ems="10"
+                                android:text="Price(BDT)"
+                                android:textAllCaps="false"
+                                android:textColor="#ffffff"
+                                tools:ignore="HardcodedText" />
+
+                            <TextView
+                                android:id="@+id/tv_average_year_title"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="5"
+                                android:layout_weight="1.66"
+                                android:ems="10"
+                                android:text="Average(Year)"
+                                android:textAllCaps="false"
+                                android:textColor="#ffffff"
+                                tools:ignore="HardcodedText" />
+
+                        </TableRow>
+
+                        <TableRow
+                            android:id="@+id/tr_number_8"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:weightSum="10">
+
+                            <TextView
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="0"
+                                android:layout_weight="1.00" />
+
+                            <TextView
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="1"
+                                android:layout_weight="2.63"
+                                android:ems="10" />
+
+                            <TextView
+                                android:id="@+id/tv_cross_milch_type"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="2"
+                                android:layout_weight="1.30"
+                                android:ems="10"
+                                android:text="Milch Cow"
+                                android:textAllCaps="false"
+                                tools:ignore="HardcodedText" />
+
+                            <EditText
+                                android:id="@+id/et_cross_milch_cow_qut"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="3"
+                                android:layout_weight="1.65"
+                                android:ems="10"
+                                android:gravity="start"
+                                android:hint="Milch Cow Qut"
+                                android:inputType="numberDecimal"
+                                android:textAlignment="textStart"
+                                tools:ignore="HardcodedText" />
+
+                            <EditText
+                                android:id="@+id/et_cross_milch_cow_price"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="4"
+                                android:layout_weight="1.76"
+                                android:ems="10"
+                                android:gravity="start"
+                                android:hint="Milch Cow Price"
+                                android:inputType="numberDecimal"
+                                android:textAlignment="textStart"
+                                tools:ignore="HardcodedText" />
+
+                            <EditText
+                                android:id="@+id/et_cross_milch_cow_age"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="5"
+                                android:layout_weight="1.66"
+                                android:ems="10"
+                                android:gravity="start"
+                                android:hint="Milch Cow Age"
+                                android:inputType="numberDecimal"
+                                android:textAlignment="textStart"
+                                tools:ignore="HardcodedText" />
+
+                        </TableRow>
+
+                        <TableRow
+                            android:id="@+id/tr_number_9"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:id="@+id/tv_serial_number_1"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:ems="10"
+                                android:gravity="start"
+                                android:text="1"
+                                android:textAlignment="textStart"
+                                android:textAllCaps="false"
+                                tools:ignore="HardcodedText" />
+
+                            <TextView
+                                android:id="@+id/tv_cross_total_cow"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="1"
+                                android:layout_weight="2.63"
+                                android:ems="15"
+                                android:text="Cross Cow Total:"
+                                android:textAllCaps="false"
+                                tools:ignore="HardcodedText" />
+
+                            <TextView
+                                android:id="@+id/tv_cross_calf_type"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="2"
+                                android:layout_weight="1.30"
+                                android:ems="10"
+                                android:text="Calf Cow"
+                                android:textAllCaps="false"
+                                tools:ignore="HardcodedText" />
+
+                            <EditText
+                                android:id="@+id/et_cross_calf_cow_qut"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="3"
+                                android:layout_weight="1.65"
+                                android:ems="10"
+                                android:gravity="start"
+                                android:hint="Calf Cow Qut"
+                                android:inputType="numberDecimal"
+                                android:textAlignment="textStart"
+                                android:textAllCaps="false"
+                                tools:ignore="HardcodedText" />
+
+                            <EditText
+                                android:id="@+id/et_cross_calf_cow_price"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="4"
+                                android:layout_weight="1.76"
+                                android:ems="10"
+                                android:gravity="start"
+                                android:hint="Calf Cow Price"
+                                android:inputType="numberDecimal"
+                                android:textAlignment="textStart"
+                                android:textAllCaps="false"
+                                tools:ignore="HardcodedText" />
+
+                            <EditText
+                                android:id="@+id/et_cross_calf_cow_age"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="5"
+                                android:layout_weight="1.66"
+                                android:ems="10"
+                                android:gravity="start"
+                                android:hint="Calf Cow Age"
+                                android:inputType="numberDecimal"
+                                android:textAlignment="textStart"
+                                android:textAllCaps="false"
+                                tools:ignore="HardcodedText" />
+
+                        </TableRow>
+
+                        <TableRow
+                            android:id="@+id/tr_number_10"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:weightSum="10">
+
+                            <TextView
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="0"
+                                android:layout_weight="1.00"
+                                android:ems="10" />
+
+                            <TextView
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="1"
+                                android:layout_weight="2.63"
+                                android:ems="10" />
+
+                            <TextView
+                                android:id="@+id/tv_cross_male_type"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="2"
+                                android:layout_weight="1.30"
+                                android:ems="10"
+                                android:text="Male Cow"
+                                android:textAllCaps="false"
+                                tools:ignore="HardcodedText" />
+
+                            <EditText
+                                android:id="@+id/et_cross_male_cow_qut"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="3"
+                                android:layout_weight="1.65"
+                                android:ems="10"
+                                android:gravity="start"
+                                android:hint="Male Cow Qut"
+                                android:inputType="numberDecimal"
+                                android:textAlignment="textStart"
+                                android:textAllCaps="false"
+                                tools:ignore="HardcodedText" />
+
+                            <EditText
+                                android:id="@+id/et_cross_male_cow_price"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="4"
+                                android:layout_weight="1.76"
+                                android:ems="10"
+                                android:gravity="start"
+                                android:hint="Male Cow Price"
+                                android:inputType="numberDecimal"
+                                android:textAlignment="textStart"
+                                android:textAllCaps="false"
+                                tools:ignore="HardcodedText" />
+
+                            <EditText
+                                android:id="@+id/et_cross_male_cow_age"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="5"
+                                android:layout_weight="1.66"
+                                android:ems="10"
+                                android:gravity="start"
+                                android:hint="Male Cow Age"
+                                android:inputType="numberDecimal"
+                                android:textAlignment="textStart"
+                                android:textAllCaps="false"
+                                tools:ignore="HardcodedText" />
+                        </TableRow>
+
+                        <TableRow
+                            android:id="@+id/tr_number_11"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:weightSum="10">
+
+                            <TextView
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="0"
+                                android:layout_weight="1.00"
+                                android:ems="10" />
+
+                            <TextView
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="1"
+                                android:layout_weight="2.63"
+                                android:ems="10" />
+
+                            <TextView
+                                android:id="@+id/tv_local_milch_type"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="2"
+                                android:layout_weight="1.30"
+                                android:ems="10"
+                                android:text="Milch Cow"
+                                android:textAllCaps="false"
+                                tools:ignore="HardcodedText" />
+
+                            <EditText
+                                android:id="@+id/et_local_milch_cow_qut"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="3"
+                                android:layout_weight="1.65"
+                                android:ems="10"
+                                android:gravity="start"
+                                android:hint="Milch Cow Qut"
+                                android:inputType="numberDecimal"
+                                android:textAlignment="textStart"
+                                tools:ignore="HardcodedText" />
+
+                            <EditText
+                                android:id="@+id/et_local_milch_cow_price"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="4"
+                                android:layout_weight="1.76"
+                                android:ems="10"
+                                android:gravity="start"
+                                android:hint="Milch Cow Price"
+                                android:inputType="numberDecimal"
+                                android:textAlignment="textStart"
+                                tools:ignore="HardcodedText" />
+
+                            <EditText
+                                android:id="@+id/et_local_milch_cow_age"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="5"
+                                android:layout_weight="1.66"
+                                android:ems="10"
+                                android:gravity="start"
+                                android:hint="Milch Cow Age"
+                                android:inputType="numberDecimal"
+                                android:textAlignment="textStart"
+                                tools:ignore="HardcodedText" />
+
+                        </TableRow>
+
+                        <TableRow
+                            android:id="@+id/tr_number_12"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:id="@+id/tv_serial_number_2"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.00"
+                                android:ems="10"
+                                android:gravity="start"
+                                android:text="2"
+                                android:textAlignment="textStart"
+                                android:textAllCaps="false"
+                                tools:ignore="HardcodedText" />
+
+                            <TextView
+                                android:id="@+id/tv_local_total_cow"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="1"
+                                android:layout_weight="2.63"
+                                android:ems="15"
+                                android:text="Local Cow Total:"
+                                android:textAllCaps="false"
+                                tools:ignore="HardcodedText" />
+
+                            <TextView
+                                android:id="@+id/tv_local_calf_type"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="2"
+                                android:layout_weight="1.30"
+                                android:ems="10"
+                                android:text="Calf Cow"
+                                android:textAllCaps="false"
+                                tools:ignore="HardcodedText" />
+
+                            <EditText
+                                android:id="@+id/et_local_calf_cow_qut"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="3"
+                                android:layout_weight="1.65"
+                                android:ems="10"
+                                android:gravity="start"
+                                android:hint="Calf Cow Qut"
+                                android:inputType="numberDecimal"
+                                android:textAlignment="textStart"
+                                android:textAllCaps="false"
+                                tools:ignore="HardcodedText" />
+
+                            <EditText
+                                android:id="@+id/et_local_calf_cow_price"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="4"
+                                android:layout_weight="1.76"
+                                android:ems="10"
+                                android:gravity="start"
+                                android:hint="Calf Cow Price"
+                                android:inputType="numberDecimal"
+                                android:textAlignment="textStart"
+                                android:textAllCaps="false"
+                                tools:ignore="HardcodedText" />
+
+                            <EditText
+                                android:id="@+id/et_local_calf_cow_age"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="5"
+                                android:layout_weight="1.66"
+                                android:ems="10"
+                                android:gravity="start"
+                                android:hint="Calf Cow Age"
+                                android:inputType="numberDecimal"
+                                android:textAlignment="textStart"
+                                android:textAllCaps="false"
+                                tools:ignore="HardcodedText" />
+
+                        </TableRow>
+
+                        <TableRow
+                            android:id="@+id/tr_number_13"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:weightSum="10">
+
+                            <TextView
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="0"
+                                android:layout_weight="1.00"
+                                android:ems="10" />
+
+                            <TextView
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="1"
+                                android:layout_weight="2.63"
+                                android:ems="10" />
+
+                            <TextView
+                                android:id="@+id/tv_local_male_type"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="2"
+                                android:layout_weight="1.30"
+                                android:ems="10"
+                                android:text="Male Cow"
+                                android:textAllCaps="false"
+                                tools:ignore="HardcodedText" />
+
+                            <EditText
+                                android:id="@+id/et_local_male_cow_qut"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="3"
+                                android:layout_weight="1.65"
+                                android:ems="10"
+                                android:gravity="start"
+                                android:hint="Male Cow Qut"
+                                android:inputType="numberDecimal"
+                                android:textAlignment="textStart"
+                                android:textAllCaps="false"
+                                tools:ignore="HardcodedText" />
+
+                            <EditText
+                                android:id="@+id/et_local_male_cow_price"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="4"
+                                android:layout_weight="1.76"
+                                android:ems="10"
+                                android:gravity="start"
+                                android:hint="Male Cow Price"
+                                android:inputType="numberDecimal"
+                                android:textAlignment="textStart"
+                                android:textAllCaps="false"
+                                tools:ignore="HardcodedText" />
+
+                            <EditText
+                                android:id="@+id/et_local_male_cow_age"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="5"
+                                android:layout_weight="1.66"
+                                android:ems="10"
+                                android:gravity="start"
+                                android:hint="Male Cow Age"
+                                android:inputType="numberDecimal"
+                                android:textAlignment="textStart"
+                                android:textAllCaps="false"
+                                tools:ignore="HardcodedText" />
+                        </TableRow>
+
+                        <TableRow
+                            android:id="@+id/tr_number_14"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:id="@+id/tv_question_number_3"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.00"
+                                android:ems="10"
+                                android:gravity="start"
+                                android:text="3"
+                                android:textAlignment="textStart"
+                                android:textAllCaps="false"
+                                tools:ignore="HardcodedText" />
+
+                            <TextView
+                                android:id="@+id/tv_question_3"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_span="2"
+                                android:layout_weight="3.05"
+                                android:ems="10"
+                                android:gravity="start"
+                                android:text="Does the owner have a cowshed?"
+                                android:textAlignment="textStart"
+                                android:textAllCaps="false"
+                                tools:ignore="HardcodedText" />
+
+                            <RadioGroup
+                                android:id="@+id/rg_cowshed_ans"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2.95"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/rb_cowshed_yes"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Yes"
+                                    tools:ignore="HardcodedText" />
+
+                                <RadioButton
+                                    android:id="@+id/rb_cowshed_no"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="No"
+                                    tools:ignore="HardcodedText" />
+
+                            </RadioGroup>
+                        </TableRow>
+
+                        <TableRow
+                            android:id="@+id/tr_number_15"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:id="@+id/tv_serial_number_4"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.00"
+                                android:ems="10"
+                                android:gravity="start"
+                                android:text="4"
+                                android:textAlignment="textStart"
+                                android:textAllCaps="false"
+                                tools:ignore="HardcodedText" />
+
+                            <TextView
+                                android:id="@+id/tv_question_4"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_span="2"
+                                android:layout_weight="3.05"
+                                android:ems="10"
+                                android:gravity="start"
+                                android:text="Does the shed have pacca floor?"
+                                android:textAlignment="textStart"
+                                android:textAllCaps="false"
+                                tools:ignore="HardcodedText" />
+
+                            <RadioGroup
+                                android:id="@+id/rg_pacca_floor_ans"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2.95"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/rb_pacca_floor_yes"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Yes"
+                                    tools:ignore="HardcodedText" />
+
+                                <RadioButton
+                                    android:id="@+id/rb_pacca_floor_no"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="No"
+                                    tools:ignore="HardcodedText" />
+
+                            </RadioGroup>
+                        </TableRow>
+
+                        <TableRow
+                            android:id="@+id/tr_number_16"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:id="@+id/tv_serial_number_5"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.00"
+                                android:ems="10"
+                                android:gravity="start"
+                                android:text="5"
+                                android:textAlignment="textStart"
+                                android:textAllCaps="false"
+                                tools:ignore="HardcodedText" />
+
+                            <TextView
+                                android:id="@+id/tv_question_5"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_span="2"
+                                android:layout_weight="3.05"
+                                android:ems="10"
+                                android:gravity="start"
+                                android:text="Is the Proprietor engaged in some other business/ activities?"
+                                android:textAlignment="textStart"
+                                android:textAllCaps="false"
+                                tools:ignore="HardcodedText,TooManyViews" />
+
+                            <RadioGroup
+                                android:id="@+id/rg_business_activity_ans"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2.95"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/rb_business_activity_yes"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Yes"
+                                    tools:ignore="HardcodedText" />
+
+                                <RadioButton
+                                    android:id="@+id/rb_business_activity_no"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="No"
+                                    tools:ignore="HardcodedText" />
+
+                            </RadioGroup>
+
+                            <EditText
+                                android:id="@+id/et_business_activity_comment"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3.00"
+                                android:ems="10"
+                                android:gravity="start"
+                                android:hint="if Yes"
+                                android:inputType="textPersonName"
+                                android:textAlignment="textStart"
+                                android:textAllCaps="false"
+                                tools:ignore="HardcodedText" />
+                        </TableRow>
+
+                        <TableRow
+                            android:id="@+id/tr_number_17"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:id="@+id/tv_serial_number_6"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.00"
+                                android:ems="10"
+                                android:gravity="start"
+                                android:text="6"
+                                android:textAlignment="textStart"
+                                android:textAllCaps="false"
+                                tools:ignore="HardcodedText" />
+
+                            <TextView
+                                android:id="@+id/tv_question_6"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_span="2"
+                                android:layout_weight="3.05"
+                                android:ems="10"
+                                android:gravity="start"
+                                android:text="Does the proprietor have any other loan from Bank/ Other Institution (except MFI)?"
+                                android:textAlignment="textStart"
+                                android:textAllCaps="false"
+                                tools:ignore="HardcodedText" />
+
+                            <RadioGroup
+                                android:id="@+id/rg_proprietor_have_loan_ans"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_span="2"
+                                android:layout_weight="2.95"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/rb_proprietor_have_loan_yes"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Yes"
+                                    tools:ignore="HardcodedText" />
+
+                                <RadioButton
+                                    android:id="@+id/rb_proprietor_have_loan_no"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="No"
+                                    tools:ignore="HardcodedText" />
+
+                            </RadioGroup>
+
+                            <EditText
+                                android:id="@+id/et_proprietor_have_loan_comment"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="5"
+                                android:layout_weight="3.07"
+                                android:ems="10"
+                                android:gravity="start"
+                                android:hint="if Yes Please Mention"
+                                android:inputType="textPersonName"
+                                android:textAlignment="textStart"
+                                android:textAllCaps="false"
+                                tools:ignore="HardcodedText" />
+                        </TableRow>
+
+                        <TableRow
+                            android:id="@+id/tr_number_18"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:id="@+id/tv_serial_number_7"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.00"
+                                android:ems="10"
+                                android:gravity="start"
+                                android:text="7"
+                                android:textAlignment="textStart"
+                                android:textAllCaps="false"
+                                tools:ignore="HardcodedText" />
+
+                            <TextView
+                                android:id="@+id/tv_question_7"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_span="2"
+                                android:layout_weight="3.05"
+                                android:ems="10"
+                                android:gravity="start"
+                                android:text="Did the proprietor receive training from BSCL and Oxfam?"
+                                android:textAlignment="textStart"
+                                android:textAllCaps="false"
+                                tools:ignore="HardcodedText" />
+
+                            <RadioGroup
+                                android:id="@+id/rg_training_from_ans"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_span="2"
+                                android:layout_weight="2.95"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/rb_training_from_yes"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Yes"
+                                    tools:ignore="HardcodedText" />
+
+                                <RadioButton
+                                    android:id="@+id/rb_training_from_no"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="No"
+                                    tools:ignore="HardcodedText" />
+
+                            </RadioGroup>
+                        </TableRow>
+
+                        <TableRow
+                            android:id="@+id/tr_number_19"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:id="@+id/tv_serial_number_8"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.00"
+                                android:ems="10"
+                                android:gravity="start"
+                                android:text="8"
+                                android:textAlignment="textStart"
+                                android:textAllCaps="false"
+                                tools:ignore="HardcodedText" />
+
+                            <TextView
+                                android:id="@+id/tv_question_8"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_span="2"
+                                android:layout_weight="3.05"
+                                android:ems="10"
+                                android:gravity="start"
+                                android:text="Which loan is suitable for the Dairy Enterprise?"
+                                android:textAlignment="textStart"
+                                android:textAllCaps="false"
+                                tools:ignore="HardcodedText" />
+
+                            <Spinner
+                                android:id="@+id/spinner_loan_type"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2.95">
+
+                            </Spinner>
+                        </TableRow>
+
+                        <TableRow
+                            android:id="@+id/tr_number_20"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <Button
+                                android:id="@+id/btn_save"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="2"
+                                android:gravity="center"
+                                android:text="Save" />
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </HorizontalScrollView>
+</RelativeLayout>
