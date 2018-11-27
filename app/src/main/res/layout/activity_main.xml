@@ -10,7 +10,7 @@
         tools:ignore="UselessParent">
 
         <android.support.v4.widget.NestedScrollView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent">
 
             <LinearLayout
@@ -48,7 +48,8 @@
                                 android:gravity="start"
                                 android:text="Field Officer Name"
                                 android:textAlignment="textStart"
-                                android:textAllCaps="false" />
+                                android:textAllCaps="false"
+                                tools:ignore="HardcodedText" />
 
                             <EditText
                                 android:id="@+id/et_field_officer_name"
@@ -79,7 +80,8 @@
                                 android:gravity="start"
                                 android:text="CBO No"
                                 android:textAlignment="textStart"
-                                android:textAllCaps="false" />
+                                android:textAllCaps="false"
+                                tools:ignore="HardcodedText" />
 
                             <EditText
                                 android:id="@+id/et_cbo_no"
@@ -111,7 +113,7 @@
                                 android:text="Current No Cow"
                                 android:textAlignment="textStart"
                                 android:textAllCaps="false"
-                                tools:ignore="DuplicateIds" />
+                                tools:ignore="DuplicateIds,HardcodedText" />
 
                             <TextView
                                 android:id="@+id/tv_current_no_cow"
@@ -120,7 +122,6 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight=".1"
                                 android:gravity="start"
-                                android:text="0"
                                 android:textAlignment="textStart"
                                 android:textAllCaps="false" />
                         </TableRow>
@@ -366,7 +367,6 @@
                                 android:hint="Calf Cow Qut"
                                 android:inputType="numberDecimal"
                                 android:textAlignment="textStart"
-                                android:textAllCaps="false"
                                 tools:ignore="HardcodedText" />
 
                             <EditText
@@ -862,7 +862,7 @@
                                 android:text="5"
                                 android:textAlignment="textStart"
                                 android:textAllCaps="false"
-                                tools:ignore="HardcodedText" />
+                                tools:ignore="HardcodedText,TooManyViews" />
 
                             <TextView
                                 android:id="@+id/tv_question_5"
@@ -1104,7 +1104,8 @@
                                 android:layout_height="wrap_content"
                                 android:layout_column="2"
                                 android:gravity="center"
-                                android:text="Save" />
+                                android:text="Save"
+                                tools:ignore="HardcodedText" />
                         </TableRow>
                     </TableLayout>
                 </LinearLayout>
