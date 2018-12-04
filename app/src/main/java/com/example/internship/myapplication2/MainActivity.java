@@ -12,7 +12,9 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.example.internship.myapplication2.model.AppDbHelperRoom;
 import com.example.internship.myapplication2.model.DairySiteAssessment;
 
 import java.util.ArrayList;
@@ -23,97 +25,114 @@ import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity {
 
-    @BindView(R.id.et_field_officer_name)
+    //    @BindView(R.id.et_field_officer_name)
     EditText m_et_field_officer_name;
-    @BindView(R.id.et_cbo_no)
+    //    @BindView(R.id.et_cbo_no)
     EditText m_et_cbo_no;
-    @BindView(R.id.tv_current_no_cow)
+    //    @BindView(R.id.tv_current_no_cow)
     TextView m_tv_current_no_cow;
 
-    @BindView(R.id.et_cross_milch_cow_qut)
+    //    @BindView(R.id.et_cross_milch_cow_qut)
     EditText m_et_cross_milch_cow_qut;
-    @BindView(R.id.et_cross_milch_cow_price)
+    //    @BindView(R.id.et_cross_milch_cow_price)
     EditText m_et_cross_milch_cow_price;
-    @BindView(R.id.et_cross_milch_cow_age)
+    //    @BindView(R.id.et_cross_milch_cow_age)
     EditText m_et_cross_milch_cow_age;
 
-    @BindView(R.id.tv_cross_total_cow)
+    //    @BindView(R.id.tv_cross_total_cow)
     TextView m_tv_cross_total_cow;
-    @BindView(R.id.et_cross_calf_cow_qut)
+    //    @BindView(R.id.et_cross_calf_cow_qut)
     EditText m_et_cross_calf_cow_qut;
-    @BindView(R.id.et_cross_calf_cow_price)
+    //    @BindView(R.id.et_cross_calf_cow_price)
     EditText m_et_cross_calf_cow_price;
-    @BindView(R.id.et_cross_calf_cow_age)
+    //    @BindView(R.id.et_cross_calf_cow_age)
     EditText m_et_cross_calf_cow_age;
 
-    @BindView(R.id.et_cross_male_cow_qut)
+    //    @BindView(R.id.et_cross_male_cow_qut)
     EditText m_et_cross_male_cow_qut;
 
-    @BindView(R.id.et_cross_male_cow_price)
+    //    @BindView(R.id.et_cross_male_cow_price)
     EditText m_et_cross_male_cow_price;
 
-    @BindView(R.id.et_cross_male_cow_age)
+    //    @BindView(R.id.et_cross_male_cow_age)
     EditText m_et_cross_male_cow_age;
 
-    @BindView(R.id.et_local_milch_cow_qut)
+    //    @BindView(R.id.et_local_milch_cow_qut)
     EditText m_et_local_milch_cow_qut;
-    @BindView(R.id.et_local_milch_cow_price)
+    //    @BindView(R.id.et_local_milch_cow_price)
     EditText m_et_local_milch_cow_price;
-    @BindView(R.id.et_local_milch_cow_age)
+    //    @BindView(R.id.et_local_milch_cow_age)
     EditText m_et_local_milch_cow_age;
 
-    @BindView(R.id.tv_local_total_cow)
+    //    @BindView(R.id.tv_local_total_cow)
     TextView m_tv_local_total_cow;
-    @BindView(R.id.et_local_calf_cow_qut)
+    //    @BindView(R.id.et_local_calf_cow_qut)
     EditText m_et_local_calf_cow_qut;
-    @BindView(R.id.et_local_calf_cow_price)
+    //    @BindView(R.id.et_local_calf_cow_price)
     EditText m_et_local_calf_cow_price;
-    @BindView(R.id.et_local_calf_cow_age)
+    //    @BindView(R.id.et_local_calf_cow_age)
     EditText m_et_local_calf_cow_age;
 
-    @BindView(R.id.et_local_male_cow_qut)
+    //    @BindView(R.id.et_local_male_cow_qut)
     EditText m_et_local_male_cow_qut;
-    @BindView(R.id.et_local_male_cow_price)
+    //    @BindView(R.id.et_local_male_cow_price)
     EditText m_et_local_male_cow_price;
-    @BindView(R.id.et_local_male_cow_age)
+    //    @BindView(R.id.et_local_male_cow_age)
     EditText m_et_local_male_cow_age;
 
     ////RadioButton
-    @BindView(R.id.rg_cowshed_ans)
+//    @BindView(R.id.rg_cowshed_ans)
     RadioGroup m_rg_cowshed_ans;
-    @BindView(R.id.rg_pacca_floor_ans)
+    //    @BindView(R.id.rg_pacca_floor_ans)
     RadioGroup m_rg_pacca_floor_ans;
 
-    @BindView(R.id.rg_business_activity_ans)
+    //    @BindView(R.id.rg_business_activity_ans)
     RadioGroup m_rg_business_activity_ans;
-    @BindView(R.id.et_business_activity_comment)
+    //    @BindView(R.id.et_business_activity_comment)
     EditText m_et_business_activity_comment;
 
-    @BindView(R.id.rg_proprietor_have_loan_ans)
+    //    @BindView(R.id.rg_proprietor_have_loan_ans)
     RadioGroup m_rg_proprietor_have_loan_ans;
-    @BindView(R.id.et_proprietor_have_loan_comment)
+    //    @BindView(R.id.et_proprietor_have_loan_comment)
     EditText m_et_proprietor_have_loan_comment;
 
-    @BindView(R.id.rg_training_from_ans)
+    //    @BindView(R.id.rg_training_from_ans)
     RadioGroup m_rg_training_from_ans;
 
     Spinner m_spinner_loan_type;
     //   @BindView(R.id.btn_save)
     Button m_btn_save;
+    Button m_btn_show;
+    DairySiteAssessment assessment;
 
-    DairySiteAssessment assessment = new DairySiteAssessment();
+    AppDbHelperRoom appDbHelperRoom;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ButterKnife.bind(this);
+        // ButterKnife.bind(this);
+        DeclerEditText();
         declerSpinner();
+        appDbHelperRoom = new AppDbHelperRoom(this);
+        assessment = new DairySiteAssessment();
+        m_btn_show = findViewById(R.id.btn_show);
 
         m_btn_save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 initializeValue();
+            }
+        });
+        m_btn_show.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                for (DairySiteAssessment a : appDbHelperRoom.GetAllDairySiteAssessment()) {
+                    Log.e("Show", "onId: " + a.getId());
+                    Log.e("Show", "SuitableLoanType: " + a.getReferenceId());
+                    Log.e("Show", "SuitableLoanType: " + a.getReferenceType());
+                    Log.e("Show", "CrossCalfCowQty: " + a.getAssessmentDate());
+                }
             }
         });
     }
@@ -132,97 +151,114 @@ public class MainActivity extends AppCompatActivity {
         dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         m_spinner_loan_type.setAdapter(dataAdapter);
     }
-//    private void DeclerEditText() {
-//        m_et_field_officer_name = findViewById(R.id.et_field_officer_name);
-//        m_et_cbo_no = findViewById(R.id.et_cbo_no);
-//
-//        m_et_cross_milch_cow_qut = findViewById(R.id.et_cross_milch_cow_qut);
-//        m_et_cross_milch_cow_price = findViewById(R.id.et_cross_milch_cow_price);
-//        m_et_cross_milch_cow_age = findViewById(R.id.et_cross_milch_cow_age);
-//
-//        m_et_cross_calf_cow_qut = findViewById(R.id.et_cross_calf_cow_qut);
-//        m_et_cross_calf_cow_price = findViewById(R.id.et_cross_calf_cow_price);
-//        m_et_cross_calf_cow_age = findViewById(R.id.et_cross_calf_cow_age);
-//
-//        m_et_cross_male_cow_qut = findViewById(R.id.et_cross_male_cow_qut);
-//        m_et_cross_male_cow_price = findViewById(R.id.et_cross_male_cow_price);
-//        m_et_cross_male_cow_age = findViewById(R.id.et_cross_male_cow_age);
-//
-//        m_et_local_milch_cow_qut = findViewById(R.id.et_local_milch_cow_qut);
-//        m_et_local_milch_cow_price = findViewById(R.id.et_local_milch_cow_price);
-//        m_et_local_milch_cow_age = findViewById(R.id.et_local_milch_cow_age);
-//
-//        m_et_local_calf_cow_qut = findViewById(R.id.et_local_calf_cow_qut);
-//        m_et_local_calf_cow_price = findViewById(R.id.et_local_calf_cow_price);
-//        m_et_local_calf_cow_age = findViewById(R.id.et_local_calf_cow_age);
-//
-//        m_et_local_male_cow_qut = findViewById(R.id.et_local_male_cow_qut);
-//        m_et_local_male_cow_price = findViewById(R.id.et_local_male_cow_price);
-//        m_et_local_male_cow_age = findViewById(R.id.et_local_male_cow_age);
-//
-//        m_rg_cowshed_ans = findViewById(R.id.rg_cowshed_ans);
-//        m_rg_pacca_floor_ans = findViewById(R.id.rg_pacca_floor_ans);
-//
-//        m_rg_business_activity_ans = findViewById(R.id.rg_business_activity_ans);
-//        m_et_business_activity_comment = findViewById(R.id.et_business_activity_comment);
-//
-//        m_rg_proprietor_have_loan_ans = findViewById(R.id.rg_proprietor_have_loan_ans);
-//        m_et_proprietor_have_loan_comment = findViewById(R.id.et_proprietor_have_loan_comment);
-//
-//        m_rg_training_from_ans = findViewById(R.id.rg_training_from_ans);
-//
-//        m_btn_save = findViewById(R.id.btn_save);
-//    }
+
+    private void DeclerEditText() {
+        m_et_field_officer_name = findViewById(R.id.et_field_officer_name);
+        m_et_cbo_no = findViewById(R.id.et_cbo_no);
+
+        m_et_cross_milch_cow_qut = findViewById(R.id.et_cross_milch_cow_qut);
+        m_et_cross_milch_cow_price = findViewById(R.id.et_cross_milch_cow_price);
+        m_et_cross_milch_cow_age = findViewById(R.id.et_cross_milch_cow_age);
+
+        m_et_cross_calf_cow_qut = findViewById(R.id.et_cross_calf_cow_qut);
+        m_et_cross_calf_cow_price = findViewById(R.id.et_cross_calf_cow_price);
+        m_et_cross_calf_cow_age = findViewById(R.id.et_cross_calf_cow_age);
+
+        m_et_cross_male_cow_qut = findViewById(R.id.et_cross_male_cow_qut);
+        m_et_cross_male_cow_price = findViewById(R.id.et_cross_male_cow_price);
+        m_et_cross_male_cow_age = findViewById(R.id.et_cross_male_cow_age);
+
+        m_et_local_milch_cow_qut = findViewById(R.id.et_local_milch_cow_qut);
+        m_et_local_milch_cow_price = findViewById(R.id.et_local_milch_cow_price);
+        m_et_local_milch_cow_age = findViewById(R.id.et_local_milch_cow_age);
+
+        m_et_local_calf_cow_qut = findViewById(R.id.et_local_calf_cow_qut);
+        m_et_local_calf_cow_price = findViewById(R.id.et_local_calf_cow_price);
+        m_et_local_calf_cow_age = findViewById(R.id.et_local_calf_cow_age);
+
+        m_et_local_male_cow_qut = findViewById(R.id.et_local_male_cow_qut);
+        m_et_local_male_cow_price = findViewById(R.id.et_local_male_cow_price);
+        m_et_local_male_cow_age = findViewById(R.id.et_local_male_cow_age);
+
+        m_rg_cowshed_ans = findViewById(R.id.rg_cowshed_ans);
+        m_rg_pacca_floor_ans = findViewById(R.id.rg_pacca_floor_ans);
+
+        m_rg_business_activity_ans = findViewById(R.id.rg_business_activity_ans);
+        m_et_business_activity_comment = findViewById(R.id.et_business_activity_comment);
+
+        m_rg_proprietor_have_loan_ans = findViewById(R.id.rg_proprietor_have_loan_ans);
+        m_et_proprietor_have_loan_comment = findViewById(R.id.et_proprietor_have_loan_comment);
+
+        m_rg_training_from_ans = findViewById(R.id.rg_training_from_ans);
+
+        //  m_btn_save = findViewById(R.id.btn_save);
+    }
 
     @SuppressLint("SetTextI18n")
     private void initializeValue() {
-        assessment.setFieldOfficer(returnEditTextValue(m_et_field_officer_name));
-        assessment.setCBONo(returnEditTextValue(m_et_cbo_no));
+        try {
+            assessment.setFieldOfficer(returnEditTextValue(m_et_field_officer_name));
+            assessment.setCBONo(returnEditTextValue(m_et_cbo_no));
+            assessment.setReferenceId(1050);
+            assessment.setReferenceType("C");
+            assessment.setAssessmentDate("10-05-18");
 
-        assessment.setCrossMilchCowQty(Integer.parseInt(returnEditTextValue(m_et_cross_milch_cow_qut)));
-        assessment.setCrossMilchCowPrice(Integer.parseInt(returnEditTextValue(m_et_cross_milch_cow_price)));
-        assessment.setCrossMilchCowAge(Double.parseDouble(returnEditTextValue(m_et_cross_milch_cow_age)));
+            assessment.setCrossMilchCowQty(Integer.parseInt(returnEditTextValue(m_et_cross_milch_cow_qut)));
+            assessment.setCrossMilchCowPrice(Integer.parseInt(returnEditTextValue(m_et_cross_milch_cow_price)));
+            assessment.setCrossMilchCowAge(Double.parseDouble(returnEditTextValue(m_et_cross_milch_cow_age)));
 
-        assessment.setCrossCalfCowQty(Integer.parseInt(returnEditTextValue(m_et_cross_calf_cow_qut)));
-        assessment.setCrossCalfCowPrice(Integer.parseInt(returnEditTextValue(m_et_cross_calf_cow_price)));
-        assessment.setCrossCalfCowAge(Double.parseDouble(returnEditTextValue(m_et_cross_calf_cow_age)));
+            assessment.setCrossCalfCowQty(Integer.parseInt(returnEditTextValue(m_et_cross_calf_cow_qut)));
+            assessment.setCrossCalfCowPrice(Integer.parseInt(returnEditTextValue(m_et_cross_calf_cow_price)));
+            assessment.setCrossCalfCowAge(Double.parseDouble(returnEditTextValue(m_et_cross_calf_cow_age)));
 
-        assessment.setCrossMaleCowQty(Integer.parseInt(returnEditTextValue(m_et_cross_male_cow_qut)));
+            assessment.setCrossMaleCowQty(Integer.parseInt(returnEditTextValue(m_et_cross_male_cow_qut)));
 
-        assessment.setCrossMaleCowPrice(Integer.parseInt(returnEditTextValue(m_et_cross_male_cow_price)));
-        assessment.setCrossMaleCowAge(Double.parseDouble(returnEditTextValue(m_et_cross_male_cow_age)));
-
-
-        assessment.setLocalMilchCowQty(Integer.parseInt(returnEditTextValue(m_et_local_milch_cow_qut)));
-        assessment.setLocalMilchCowPrice(Integer.parseInt(returnEditTextValue(m_et_local_milch_cow_price)));
-        assessment.setLocalMilchCowAge(Double.parseDouble(returnEditTextValue(m_et_local_milch_cow_age)));
-
-        assessment.setLocalCalfCowQty(Integer.parseInt(returnEditTextValue(m_et_local_calf_cow_qut)));
-        assessment.setLocalCalfCowPrice(Integer.parseInt(returnEditTextValue(m_et_local_calf_cow_price)));
-        assessment.setLocalCalfCowAge(Double.parseDouble(returnEditTextValue(m_et_local_calf_cow_age)));
-
-        assessment.setLocalMaleCowQty(Integer.parseInt(returnEditTextValue(m_et_local_male_cow_qut)));
-        assessment.setLocalMaleCowPrice(Integer.parseInt(returnEditTextValue(m_et_local_male_cow_price)));
-        assessment.setLocalMaleCowAge(Double.parseDouble(returnEditTextValue(m_et_local_male_cow_age)));
+            assessment.setCrossMaleCowPrice(Integer.parseInt(returnEditTextValue(m_et_cross_male_cow_price)));
+            assessment.setCrossMaleCowAge(Double.parseDouble(returnEditTextValue(m_et_cross_male_cow_age)));
 
 
-        assessment.setHasOwnerCowshed(returnRadioGroupValue(m_rg_cowshed_ans));
-        assessment.setHasCowshedPaccaFloor(returnRadioGroupValue(m_rg_pacca_floor_ans));
+            assessment.setLocalMilchCowQty(Integer.parseInt(returnEditTextValue(m_et_local_milch_cow_qut)));
+            assessment.setLocalMilchCowPrice(Integer.parseInt(returnEditTextValue(m_et_local_milch_cow_price)));
+            assessment.setLocalMilchCowAge(Double.parseDouble(returnEditTextValue(m_et_local_milch_cow_age)));
 
-        assessment.setHasOwnerOtherBusiness(returnRadioGroupValue(m_rg_business_activity_ans));
-        assessment.setOtherBusinessName(returnEditTextValue(m_et_business_activity_comment));
+            assessment.setLocalCalfCowQty(Integer.parseInt(returnEditTextValue(m_et_local_calf_cow_qut)));
+            assessment.setLocalCalfCowPrice(Integer.parseInt(returnEditTextValue(m_et_local_calf_cow_price)));
+            assessment.setLocalCalfCowAge(Double.parseDouble(returnEditTextValue(m_et_local_calf_cow_age)));
 
-        assessment.setHasOwnerCurrentLoan(returnRadioGroupValue(m_rg_proprietor_have_loan_ans));
-        assessment.setLoanInstitutionName(returnEditTextValue(m_et_proprietor_have_loan_comment));
+            assessment.setLocalMaleCowQty(Integer.parseInt(returnEditTextValue(m_et_local_male_cow_qut)));
+            assessment.setLocalMaleCowPrice(Integer.parseInt(returnEditTextValue(m_et_local_male_cow_price)));
+            assessment.setLocalMaleCowAge(Double.parseDouble(returnEditTextValue(m_et_local_male_cow_age)));
 
-        assessment.setHasTrainingFrom(returnRadioGroupValue(m_rg_training_from_ans));
-        assessment.setSuitableLoanType(m_spinner_loan_type.getSelectedItem().toString());
 
-        int value = addValue(m_et_cross_milch_cow_qut, m_et_cross_calf_cow_qut, m_et_cross_male_cow_qut);
-        int value2 = addValue(m_et_local_milch_cow_qut, m_et_local_calf_cow_qut, m_et_local_male_cow_qut);
-        m_tv_cross_total_cow.setText("Cross Cow Total: " + value);
-        m_tv_local_total_cow.setText("Local Cow Total: " + value2);
-        m_tv_current_no_cow.setText("" + (value + value2));
+            assessment.setHasOwnerCowshed(returnRadioGroupValue(m_rg_cowshed_ans));
+            assessment.setHasCowshedPaccaFloor(returnRadioGroupValue(m_rg_pacca_floor_ans));
+
+            assessment.setHasOwnerOtherBusiness(returnRadioGroupValue(m_rg_business_activity_ans));
+            assessment.setOtherBusinessName(returnEditTextValue(m_et_business_activity_comment));
+
+            assessment.setHasOwnerCurrentLoan(returnRadioGroupValue(m_rg_proprietor_have_loan_ans));
+            assessment.setLoanInstitutionName(returnEditTextValue(m_et_proprietor_have_loan_comment));
+
+            assessment.setHasTrainingFrom(returnRadioGroupValue(m_rg_training_from_ans));
+
+            assessment.setSuitableLoanType(m_spinner_loan_type.getSelectedItem().toString());
+
+            int value = addValue(m_et_cross_milch_cow_qut, m_et_cross_calf_cow_qut, m_et_cross_male_cow_qut);
+            int value2 = addValue(m_et_local_milch_cow_qut, m_et_local_calf_cow_qut, m_et_local_male_cow_qut);
+//            m_tv_cross_total_cow.setText("Cross Cow Total: " + value);
+//            m_tv_local_total_cow.setText("Local Cow Total: " + value2);
+//            m_tv_current_no_cow.setText("" + (value + value2));
+            appDbHelperRoom.insertAssessment(assessment);
+        } catch (Exception e) {
+            Log.e("Exception", "initializeValue: ", e);
+        }
+
+    }
+
+    private String returnEditTextValue(EditText editText) {
+        String text = editText.getText().toString();
+        Toast.makeText(this, "----" + text, Toast.LENGTH_SHORT).show();
+        return text;
     }
 
     private Integer addValue(EditText mi_Qt, EditText ca_Qt, EditText ma_Qt) {
@@ -230,10 +266,6 @@ public class MainActivity extends AppCompatActivity {
         String Qt2 = ca_Qt.getText().toString();
         String Qt3 = ma_Qt.getText().toString();
         return Integer.parseInt(Qt1 + Qt2 + Qt3);
-    }
-
-    private String returnEditTextValue(EditText editText) {
-        return editText.getText().toString();
     }
 
     private boolean returnRadioGroupValue(RadioGroup radioGroup) {

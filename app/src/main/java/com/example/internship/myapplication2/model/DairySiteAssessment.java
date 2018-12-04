@@ -1,116 +1,193 @@
 package com.example.internship.myapplication2.model;
 
+import android.arch.persistence.room.ColumnInfo;
+import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.PrimaryKey;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+@Entity
 public class DairySiteAssessment {
     @SerializedName("Id")
     @Expose
+    @PrimaryKey(autoGenerate = true)
+    @ColumnInfo(name = "id")
     private Integer id;
+
     @SerializedName("ReferenceId")
     @Expose
+    @ColumnInfo(name = "referenceId")
     private Integer referenceId;
+
     @SerializedName("ReferenceType")
     @Expose
+    @ColumnInfo(name = "referenceType")
     private String referenceType;
+
     @SerializedName("AssessmentDate")
     @Expose
+    @ColumnInfo(name = "assessmentDate")
     private String assessmentDate;
+
     @SerializedName("FieldOfficer")
     @Expose
+    @ColumnInfo(name = "fieldOfficer")
     private String fieldOfficer;
+
     @SerializedName("CBONo")
     @Expose
+    @ColumnInfo(name = "cBONo")
     private String cBONo;
+
     @SerializedName("CrossMilchCowQty")
     @Expose
+    @ColumnInfo(name = "crossMilchCowQty")
     private Integer crossMilchCowQty;
+
     @SerializedName("CrossCalfCowQty")
     @Expose
+    @ColumnInfo(name = "crossCalfCowQty")
     private Integer crossCalfCowQty;
+
     @SerializedName("CrossMaleCowQty")
     @Expose
+    @ColumnInfo(name = "crossMaleCowQty")
     private Integer crossMaleCowQty;
+
     @SerializedName("CrossMilchCowPrice")
     @Expose
+    @ColumnInfo(name = "crossMilchCowPrice")
     private Integer crossMilchCowPrice;
+
     @SerializedName("CrossCalfCowPrice")
     @Expose
+    @ColumnInfo(name = "crossCalfCowPrice")
     private Integer crossCalfCowPrice;
+
     @SerializedName("CrossMaleCowPrice")
     @Expose
+    @ColumnInfo(name = "crossMaleCowPrice")
     private Integer crossMaleCowPrice;
+
     @SerializedName("CrossMilchCowAge")
     @Expose
+    @ColumnInfo(name = "crossMilchCowAge")
     private Double crossMilchCowAge;
+
     @SerializedName("CrossCalfCowAge")
     @Expose
+    @ColumnInfo(name = "crossCalfCowAge")
     private Double crossCalfCowAge;
+
     @SerializedName("CrossMaleCowAge")
     @Expose
+    @ColumnInfo(name = "crossMaleCowAge")
     private Double crossMaleCowAge;
+
     @SerializedName("LocalMilchCowQty")
     @Expose
+    @ColumnInfo(name = "localMilchCowQty")
     private Integer localMilchCowQty;
+
     @SerializedName("LocalCalfCowQty")
     @Expose
+    @ColumnInfo(name = "localCalfCowQty")
     private Integer localCalfCowQty;
+
     @SerializedName("LocalMaleCowQty")
     @Expose
+    @ColumnInfo(name = "localMaleCowQty")
     private Integer localMaleCowQty;
+
     @SerializedName("LocalMilchCowPrice")
     @Expose
+    @ColumnInfo(name = "localMilchCowPrice")
     private Integer localMilchCowPrice;
+
     @SerializedName("LocalCalfCowPrice")
     @Expose
+    @ColumnInfo(name = "localCalfCowPrice")
     private Integer localCalfCowPrice;
+
     @SerializedName("LocalMaleCowPrice")
     @Expose
+    @ColumnInfo(name = "localMaleCowPrice")
     private Integer localMaleCowPrice;
+
     @SerializedName("LocalMilchCowAge")
     @Expose
+    @ColumnInfo(name = "localMilchCowAge")
     private Double localMilchCowAge;
+
     @SerializedName("LocalCalfCowAge")
     @Expose
+    @ColumnInfo(name = "localCalfCowAge")
     private Double localCalfCowAge;
+
     @SerializedName("LocalMaleCowAge")
     @Expose
+    @ColumnInfo(name = "localMaleCowAge")
     private Double localMaleCowAge;
+
     @SerializedName("HasOwnerCowshed")
     @Expose
+    @ColumnInfo(name = "hasOwnerCowshed")
     private Boolean hasOwnerCowshed;
+
     @SerializedName("HasCowshedPaccaFloor")
     @Expose
+    @ColumnInfo(name = "hasCowshedPaccaFloor")
     private Boolean hasCowshedPaccaFloor;
+
     @SerializedName("HasOwnerOtherBusiness")
     @Expose
+    @ColumnInfo(name = "hasOwnerOtherBusiness")
     private Boolean hasOwnerOtherBusiness;
+
     @SerializedName("OtherBusinessName")
     @Expose
+    @ColumnInfo(name = "otherBusinessName")
     private String otherBusinessName;
+
     @SerializedName("HasOwnerCurrentLoan")
     @Expose
+    @ColumnInfo(name = "hasOwnerCurrentLoan")
     private Boolean hasOwnerCurrentLoan;
+
     @SerializedName("LoanInstitutionName")
     @Expose
+    @ColumnInfo(name = "loanInstitutionName")
     private String loanInstitutionName;
+
     @SerializedName("HasTrainingFrom")
     @Expose
+    @ColumnInfo(name = "hasTrainingFrom")
     private Boolean hasTrainingFrom;
+
     @SerializedName("SuitableLoanType")
     @Expose
+    @ColumnInfo(name = "suitableLoanType")
     private String suitableLoanType;
+
     @SerializedName("EntryBy")
     @Expose
+    @ColumnInfo(name = "entryBy")
     private Integer entryBy;
+
     @SerializedName("EntryTime")
     @Expose
+    @ColumnInfo(name = "entryTime")
     private String entryTime;
+
     @SerializedName("UpdateBy")
     @Expose
+    @ColumnInfo(name = "updateBy")
     private Integer updateBy;
+
     @SerializedName("UpdateTime")
     @Expose
+    @ColumnInfo(name = "updateTime")
     private String updateTime;
 
     public Integer getId() {
